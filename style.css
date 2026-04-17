@@ -55,7 +55,7 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
   padding: 60px 80px;
   display: flex;
   align-items: center;
@@ -118,8 +118,9 @@ html, body {
   color: #333;
   margin-bottom: 20px;
   text-align: left;
-  padding-left: 2ch; /* 左缩进2个中文字符 */
-  width: calc(100% - 4ch); /* 右留2字符间距 */
+  /* 标题有 6px(边框) + 20px(内边距) = 26px 左偏移，在此基础上加 2em 实现向右缩进两个字符 */
+  padding-left: calc(26px + 2em); 
+  padding-right: 2em; /* 右侧留白间距 */
 }
 
 /* ====================== 图片样式（标题下方垂直排列） ====================== */
@@ -127,7 +128,8 @@ html, body {
   display: block;
   max-width: 70%;
   height: auto;
-  margin: 20px 0 20px 2ch; /* 与正文同缩进，上下间距 */
+  /* 左边距同步调整为与正文一致 */
+  margin: 20px 0 20px calc(26px + 2em); 
   border-radius: 8px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
@@ -135,7 +137,8 @@ html, body {
 /* ====================== 目录样式（修复图标重叠） ====================== */
 .content-slide ul {
   list-style: none;
-  padding-left: 3ch !important;
+  /* 与正文缩进保持一致 */
+  padding-left: calc(26px + 2em) !important;
 }
 .content-slide ul li {
   position: relative;
@@ -146,7 +149,8 @@ html, body {
 .content-slide ul li::before {
   content: "";
   position: absolute;
-  left: -2ch;
+  /* 调整圆点位置 */
+  left: -1.2em; 
   top: 50%;
   transform: translateY(-50%);
   width: 8px;
@@ -178,22 +182,35 @@ h1 {
 /* ====================== 底部翻页按钮样式 ====================== */
 .nav-buttons {
   position: fixed;
-  bottom: 6vh;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 5vh;          /* 距离底部 */
+  right: 40px;          /* 靠右下角 */
   display: flex;
-  gap:24px;
-  z-index:999;
+  gap: 12px;            /* 按钮间距 */
+  z-index: 999;
+  opacity: 0.3;         /* 降低透明度 */
+  transition: opacity 0.4s ease;
+}
+.nav-buttons:hover {
+  opacity: 1;           /* 鼠标悬浮时恢复完全可见 */
 }
 .nav-btn {
-  width:50px; height:50px; border-radius:50%; border:none;
-  background:rgba(45,108,223,0.1); color:#2D6CDF;
-  font-size:1.2rem; cursor:pointer; transition:0.3s;
+  width: 36px;          /* 缩小按钮 */
+  height: 36px;
+  border-radius: 50%; 
+  border: none;
+  background: rgba(45,108,223,0.15); 
+  color: #2D6CDF;
+  font-size: 1rem;      /* 缩小内部箭头 */
+  cursor: pointer; 
+  transition: 0.3s;
 }
-.nav-btn:hover { background:rgba(45,108,223,0.2); transform:scale(1.1); }
+.nav-btn:hover { 
+  background: rgba(45,108,223,0.3); 
+  transform: scale(1.1); 
+}
 
 /* ====================== 数学公式居中样式 ====================== */
 mjx-container {
   text-align: center !important;
-  margin:12px 0 !important;
+  margin: 12px 0 !important;
 }
