@@ -1,6 +1,6 @@
 # ✨ simple_HTML_slides
 
-> 极简 HTML 学术汇报演示文稿模板 | 开箱即用 · 零依赖 · AI 驱动 · 专注内容
+> 极简 HTML 学术汇报演示文稿模板 | 方便 AI 一键生成 | 开箱即用 · 零依赖 · AI 驱动 · 专注内容
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourname/simple_HTML_slides/pulls)
