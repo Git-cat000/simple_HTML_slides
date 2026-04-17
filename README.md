@@ -44,8 +44,8 @@ git clone https://github.com/你的用户名/simple_HTML_slides.git
 5. 图片测试页：图片自动排版示例
 6. 结束页：感谢观看收尾页
 
-## 🛠️ 详细自定义配置（手把手教学）
-本模板所有自定义操作均无需编程基础，仅需修改文本、替换图片即可完成个性化配置，所有修改位置均有明确标注。
+## 🛠️ 详细自定义配置
+本模板所有修改位置均有明确标注。
 
 ### 一、基础文字内容修改
 打开 index.html 文件，直接替换对应位置的文字即可。
@@ -75,9 +75,8 @@ git clone https://github.com/你的用户名/simple_HTML_slides.git
 将需要插入的图片（PNG/JPG/SVG 格式）放入项目根目录。
 #### 2. 插入图片代码
 在对应页面的正文下方，添加图片标签：
-<img src="你的图片名称.png" class="slide-img">
-<img src="图片1.png" class="slide-img">
-<img src="图片2.png" class="slide-img">
+<img src="your pictures position" class="slide-img">
+<img src="your another pictures position" class="slide-img">
 
 #### 3. 图片规则
 - 图片自动与正文左对齐
