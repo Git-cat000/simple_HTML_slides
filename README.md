@@ -3,9 +3,7 @@
 > 极简 HTML 学术汇报演示文稿模板 | 方便 AI 一键生成 | 开箱即用 · 零依赖 · AI 驱动 · 专注内容
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourname/simple_HTML_slides/pulls)
-
-本项目代码均由豆包生成。
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Git-cat000/simple_HTML_slides/pulls)
 
 ---
 
@@ -253,6 +251,7 @@ AI 将返回一份已经填充好内容的完整 HTML 代码。你只需：
 ---
 
 ## 📢 声明
+
 
 本项目所有代码均由豆包生成，专为学术汇报场景设计，免费开源共享！  
 特别强调：本模板的 HTML 结构经过精心设计，**对 AI 工具极其友好**。无论是豆包、ChatGPT、Claude 还是 Kimi，均可准确识别并操作模板内容，真正实现“用 AI 加速学术表达”的目标。
