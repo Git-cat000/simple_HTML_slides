@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!-- 移动端适配 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <!-- 网页标题（可自定义） -->
+  <title>学术汇报演示模板</title>
+  <!-- 引入CSS样式文件 -->
+  <link rel="stylesheet" href="style.css">
+  <!-- 引入MathJs公式渲染库（支持LaTeX数学公式） -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <!-- 顶部进度条：展示当前页码进度 -->
+  <div class="progress">
+    <div class="progress-fill"></div>
+  </div>
+
+  <!-- 幻灯片容器：所有页面包裹在此 -->
+  <div class="slides">
+    <!-- ====================== 第1页：封面页（模板化） ====================== -->
+    <section class="slide active">
+      <!-- 页码元素 -->
+      <div class="page-num"></div>
+      <!-- 装饰色块 -->
+      <div class="decor left-decor"></div>
+      <div class="decor bottom-right-decor"></div>
+      <div class="decor corner-decor"></div>
+      <div class="decor bottom-left-decor"></div>
+      <!-- 封面内容 -->
+      <div class="content-wrap">
+        <h1>汇报标题</h1>
+        <p class="sub-title">汇报副标题</p>
+        <p class="author">单位 | 姓名</p>
+      </div>
+    </section>
+
+    <!-- ====================== 第2页：目录页（模板化） ====================== -->
+    <section class="slide content-slide">
+      <div class="page-num"></div>
+      <div class="decor left-decor"></div>
+      <div class="decor bottom-right-decor"></div>
+      <div class="decor corner-decor"></div>
+      <div class="decor bottom-left-decor"></div>
+      <div class="content-wrap">
+        <h2>Outlines</h2>
+        <!-- 目录点击导航：jumpTo(数字) 对应跳转页码（从0开始） -->
+        <ul>
+          <li><a onclick="jumpTo(2)">内容1</a></li>
+          <li><a onclick="jumpTo(3)">数学公式测试</a></li>
+          <li><a onclick="jumpTo(4)">图片测试</a></li>
+          <li><a onclick="jumpTo(5)">内容2</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====================== 第3页：正文内容1（模板化） ====================== -->
+    <section class="slide content-slide">
+      <div class="page-num"></div>
+      <div class="decor left-decor"></div>
+      <div class="decor bottom-right-decor"></div>
+      <div class="decor corner-decor"></div>
+      <div class="decor bottom-left-decor"></div>
+      <div class="content-wrap">
+        <h2>内容1</h2>
+        <p>正文内容1</p>
+        <p>正文内容2</p>
+        <p>正文内容3</p>
+      </div>
+    </section>
+
+    <!-- ====================== 第4页：数学公式测试（固定） ====================== -->
+    <section class="slide content-slide">
+      <div class="page-num"></div>
+      <div class="decor left-decor"></div>
+      <div class="decor bottom-right-decor"></div>
+      <div class="decor corner-decor"></div>
+      <div class="decor bottom-left-decor"></div>
+      <div class="content-wrap">
+        <h2>数学公式测试 - 麦克斯韦方程组</h2>
+        <p>微分形式（真空）：</p>
+        <p>$$ \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} $$</p>
+        <p>$$ \nabla \cdot \mathbf{B} = 0 $$</p>
+        <p>$$ \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} $$</p>
+        <p>$$ \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} $$</p>
+        <p>积分形式（真空）：</p>
+        <p>$$ \oint_S \mathbf{E} \cdot d\mathbf{S} = \frac{Q}{\varepsilon_0} $$</p>
+        <p>$$ \oint_S \mathbf{B} \cdot d\mathbf{S} = 0 $$</p>
+      </div>
+    </section>
+
+    <!-- ====================== 第5页：图片测试（固定） ====================== -->
+    <section class="slide content-slide">
+      <div class="page-num"></div>
+      <div class="decor left-decor"></div>
+      <div class="decor bottom-right-decor"></div>
+      <div class="decor corner-decor"></div>
+      <div class="decor bottom-left-decor"></div>
+      <div class="content-wrap">
+        <h2>图片测试</h2>
+        <p>图片自动在标题下方垂直排列，支持单张/多张图片</p>
+        <!-- 单张图片 -->
+        <img src="https://picsum.photos/900/500" class="slide-img">
+        <!-- 多张图片直接追加即可 -->
+        <!-- <img src="图片地址" class="slide-img"> -->
+      </div>
+    </section>
+
+    <!-- ====================== 第6页：正文内容2（模板化） ====================== -->
+    <section class="slide content-slide">
+      <div class="page-num"></div>
+      <div class="decor left-decor"></div>
+      <div class="decor bottom-right-decor"></div>
+      <div class="decor corner-decor"></div>
+      <div class="decor bottom-left-decor"></div>
+      <div class="content-wrap">
+        <h2>内容2</h2>
+        <p>正文内容1</p>
+        <p>正文内容2</p>
+      </div>
+    </section>
+
+    <!-- ====================== 最后一页：结束页（固定） ====================== -->
+    <section class="slide">
+      <div class="page-num"></div>
+      <div class="decor left-decor"></div>
+      <div class="decor bottom-right-decor"></div>
+      <div class="decor corner-decor"></div>
+      <div class="decor bottom-left-decor"></div>
+      <div class="content-wrap">
+        <h1>谢谢观看</h1>
+        <p class="sub-title">敬请批评指正</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- 底部翻页按钮 -->
+  <div class="nav-buttons">
+    <button class="nav-btn prev-btn">←</button>
+    <button class="nav-btn next-btn">→</button>
+  </div>
+
+  <!-- 引入JS交互文件 -->
+  <script src="script.js"></script>
+</body>
+</html>
