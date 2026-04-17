@@ -20,7 +20,7 @@
 直接下载项目压缩包，解压到本地任意文件夹即可使用。
 #### 方式 2：Git 克隆
 打开终端，执行以下命令克隆项目到本地：
-git clone https://github.com/你的用户名/simple_HTML_slides.git
+`git clone https://github.com/你的用户名/simple_HTML_slides.git`
 
 ### 2. 启动演示文稿
 零配置、零安装、零编译！
@@ -50,19 +50,25 @@ git clone https://github.com/你的用户名/simple_HTML_slides.git
 ### 一、基础文字内容修改
 打开 `index.html` 文件，直接替换对应位置的文字即可。
 #### 1. 封面页自定义
+```
 <h1>汇报标题</h1>                 
 <p class="sub-title">汇报副标题</p> 
-<p class="author">单位 | 姓名</p>   
+<p class="author">单位 | 姓名</p>
+```
 
 #### 2. 目录页自定义
+```
 <h2>Outlines</h2> 
 <li><a onclick="jumpTo(2)">内容1</a></li>
 <li><a onclick="jumpTo(3)">数学公式测试</a></li>
+```
 
 #### 3. 正文页自定义
+```
 <h2>内容1</h2>        
 <p>正文内容1</p>      
 <p>正文内容2</p>
+```
 
 ---
 
@@ -70,12 +76,12 @@ git clone https://github.com/你的用户名/simple_HTML_slides.git
 #### 1. 准备图片
 将图片放入项目根目录。
 #### 2. 插入图片代码
-<img src="你的图片名称" class="slide-img">
+`<img src="你的图片名称" class="slide-img">`
 
 ---
 
 ### 三、数学公式添加（LaTeX 语法）
-<p>$$ \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} $$</p>
+`<p>$$ \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} $$</p>`
 
 ---
 
